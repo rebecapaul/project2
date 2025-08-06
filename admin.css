@@ -1,0 +1,67 @@
+/* css/admin.css */
+:root {
+  --green: #27ae60;
+  --black: #192a56;
+  --light-color: #666;
+  --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f7f7f7;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Sidebar Styles */
+.side-menu {
+  width: 250px;
+  background: var(--black);
+  color: white;
+  height: 100vh;
+  position: fixed;
+  padding: 2rem 0;
+  transition: all 0.3s;
+}
+
+/* ... (include all other CSS rules from previous examples) ... */
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .side-menu {
+    transform: translateX(-100%);
+  }
+  
+  .side-menu.active {
+    transform: translateX(0);
+  }
+  
+  .main-content {
+    margin-left: 0;
+  }
+  
+  /* ... (other responsive styles) ... */
+}
